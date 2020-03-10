@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>EEG correlation viewer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+		</style>
+	</head>
+	<body>
+		<brain-correlation-3d-viewer></brain-correlation-3d-viewer>
+		<div id="time-series-plot"></div>
+        
+		<!-- Components -->
+        <!--
+			<script type="riot/tag" src="components/fileinput.html"></script>
+		-->
+		<script type="riot/tag" src="components/csv-file-input@1.0.html"></script>
+		<script type="riot/tag" src="components/sortable-file-list-input@1.0.html"></script>
+        <script type="riot/tag" src="components/sphere-brain-viewer@1.0.html"></script>
+		<script type="riot/tag" src="components/time-series-range@1.0.html"></script>
+        <script type="riot/tag" src="components/brain-correlation-3d-viewer@1.0.html"></script>
+        
+		<!-- Libraries -->
+        <script src="./lib/riot@3.13/riot+compiler.js"></script>
+		
+		<script src="./lib/papaparse@4.6.1/papaparse.js"></script>
+
+		<script src="./lib/apexcharts@3.5.0/apexcharts.js"></script>
+
+		<script src="./lib/three.js@55/three.js"></script>
+		<script src="./lib/three.js@55/loaders/STLLoader.js"></script>
+		<script src="./lib/three.js@55/controls/TrackballControls.js"></script>
+
+		<script src="./lib/nv.d3@1.1.11b/d3.v3.js"></script>
+        <script src="./lib/nv.d3@1.1.11b/nv.d3.js"></script>
+		<link rel="stylesheet" type="text/css" href="./lib/nv.d3@1.1.11b/nv.d3.css">
+        
+		<script>_module = module;delete module;</script>
+		<script src="./lib/jquery@3.3.1/jquery.js"></script>
+		
+		<script src="./lib/sortable.js@1.8.3/Sortable.js"></script>
+		<script>module = _module;delete _module;</script>
+
+		<link rel="stylesheet" type="text/css" href="./lib/fomantic-ui@2.7.2/semantic.css">
+		<script src="./lib/fomantic-ui@2.7.2/semantic.js"></script>
+	
+        <!-- App -->
+		<link rel="stylesheet" type="text/css" href="./src/css/main.css">
+
+        <!-- Bootload scripts -->
+        <script>
+        riot.mount('*', {
+        })
+        </script>
+
+	</body>
+</html>
